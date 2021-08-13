@@ -1,0 +1,135 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from gambolthemes.net/html-items/cursus_main_demo/invoice.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Jul 2021 09:58:57 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+<meta name="description" content="Gambolthemes">
+<meta name="author" content="Gambolthemes">
+<title>Cursus - Invoice Membership</title>
+
+<link rel="icon" type="image/png" href="{% static 'user/images/fav.png' %}">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,500" rel='stylesheet'>
+<link href="{% static 'user/vendor/unicons-2.0.1/css/unicons.css' %}" rel='stylesheet'>
+<link href="{% static 'user/css/vertical-responsive-menu.min.css' %}" rel="stylesheet">
+<link href="{% static 'user/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'user/css/responsive.css' %}" rel="stylesheet">
+
+<link href="{% static 'user/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+<link href="{% static 'user/vendor/OwlCarousel/assets/owl.carousel.css' %}" rel="stylesheet">
+<link href="{% static 'user/vendor/OwlCarousel/assets/owl.theme.default.min.css' %}" rel="stylesheet">
+<link href="{% static 'user/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'user/vendor/semantic/semantic.min.css' %}">
+</head>
+<body>
+
+<header class="invoice_header clearfix">
+<div class="container">
+<div class="row justify-content-md-center">
+<div class="col-md-8">
+<div class="invoice_header_main">
+<div class="invoice_header_item">
+<div class="invoice_logo">
+<a href="index-2.html"><img src="{% static 'user/images/ct_logo.svg' %}" alt=""></a>
+</div>
+<p>Invoice</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+
+<div class="wrapper _bg4586 _new89 p-0">
+<div class="container">
+<div class="row justify-content-md-center">
+<div class="col-md-8">
+<div class="invoice_body">
+
+<div class="invoice_dts">
+<div class="row">
+<div class="col-md-12">
+<h2 class="invoice_title">Invoice</h2>
+</div>
+
+
+</div>
+</div>
+<div class="invoice_table">
+<div class="table-responsive-md">
+<table class="table table-borderless">
+<thead>
+   
+<tr>
+<th scope="col">Course Name</th>
+<th scope="col">Date</th>
+<th scope="col">Price</th>
+<th scope="col">Payment Method</th>
+</tr>
+</thead>
+<tbody>
+{% for i in purchase %}     
+<tr>
+<th scope="row">
+<div class="user_dt_trans">
+<p>{{i.item.course_name}}</p>
+</div>
+</th>
+<td>
+<div class="user_dt_trans">
+<p>{{i.purchase_date}}</p>
+</div>
+</td>
+<td>
+<div class="user_dt_trans">
+<p>{{i.price}}</p>
+</div>
+</td>
+<td>
+<div class="user_dt_trans">
+<p>{{i.pay_method}}</p>
+</div>
+</td>
+</tr>
+{% endfor %}
+<tr>
+<td colspan="1"></td>
+<td colspan="3">
+<!-- <div class="user_dt_trans jsk1145">
+<div class="totalinv2">Invoice Total : USD $220.00</div>
+<p>Paid via Paypal</p>
+</div> -->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="invoice_footer">
+<div class="leftfooter">
+<p>Thanks for buying.</p>
+</div>
+<!-- <div class="righttfooter">
+<a class="print_btn" href="javascript:window.print();">Print</a>
+</div> -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="{% static 'user/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'user/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'user/vendor/OwlCarousel/owl.carousel.js' %}"></script>
+<script src="{% static 'user/vendor/semantic/semantic.min.js' %}"></script>
+<script src="{% static 'user/js/custom.js' %}"></script>
+</body>
+
+<!-- Mirrored from gambolthemes.net/html-items/cursus_main_demo/invoice.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Jul 2021 09:58:57 GMT -->
+</html>
